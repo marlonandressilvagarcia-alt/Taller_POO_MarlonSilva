@@ -23,7 +23,7 @@ public class Enemigo {
     }
     // Firmas de la API pública de comportamiento
     public void atacar(Personaje personaje) {
-        personaje.recibirDaño(this.puntosAtaque);
+        personaje.recibirDano(this.puntosAtaque);
         System.out.println("El enemigo " + this.nombre + " te atacó y causó " + this.puntosAtaque + " de daño.");    }
     public void usarPocion(int cantidadRestaurada) {
         setPuntosVida(this.puntosVida + cantidadRestaurada);    }
