@@ -1,18 +1,19 @@
 package co.edu.puj.rpg.modelo;
 
 import co.edu.puj.rpg.modelo.enemigo.Enemigo;
+import co.edu.puj.rpg.modelo.enums.TipoPersonaje;
 
 public class Guerrero extends Personaje {
 
     protected int fuerzaEscudo;
 
-    public Guerrero(String nombre, int vidaMaxima, int puntosAtaque, double oro) {
-        super(nombre, vidaMaxima, puntosAtaque, oro);
-        this.fuerzaEscudo = 15; // Valor inicial para el escudo
+    public Guerrero(String nombre, int vidaMaxima, int puntosAtaque, double oro, TipoPersonaje tipoPersonaje) {
+        super(nombre, vidaMaxima, puntosAtaque, oro, tipoPersonaje);
+        this.fuerzaEscudo = 15;
     }
 
     @Override
-    public  void realizarAtaqueEspecial(Enemigo objetivo) {
+    public void realizarAtaqueEspecial(Enemigo objetivo) {
         int danoEspecial = this.ataqueBase * 2;
         objetivo.recibirDano(danoEspecial);
         System.out.println(this.nombre + " ejecutó un golpe certero especial.");
